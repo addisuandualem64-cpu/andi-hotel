@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Etetu Abusha Hotel</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-logo" href="#" onclick="showPage('home')">Etetu <span>Abusha</span></a>
+  <div class="nav-links" id="navLinks">
+    <a onclick="showPage('home')" class="active" id="nav-home">Home</a>
+    <a onclick="showPage('rooms')" id="nav-rooms">Rooms &amp; Suites</a>
+    <a onclick="showPage('about')" id="nav-about">About Us</a>
+    <a class="nav-cta" href="tel:0930333363">&#9990; Reserve Now</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ===== HOME PAGE ===== -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <img class="hero-img"
+      src="unnamed.jpg"
+      alt="Alaba Kulito Ethiopia landscape"
+      onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80'"
+    >
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Alaba Kulito, Ethiopia</div>
+      <h1>Etetu<br><em>Abusha</em><br>Hotel</h1>
+      <p class="hero-sub">Where Ethiopian warmth meets refined comfort</p>
+      <div class="hero-actions">
+        <a href="tel:0930333363" class="btn-primary">Reserve Your Stay</a>
+        <button class="btn-outline" onclick="showPage('rooms')">Explore Rooms</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATING STRIP -->
+  <div class="rating-strip">
+    <div class="rating-item">
+      <span class="rating-icon">&#9733;</span>
+      <div class="rating-text"><strong>4.3 / 5</strong>Guest Rating</div>
+    </div>
+    <div class="rating-item">
+      <span class="rating-icon">&#10022;</span>
+      <div class="rating-text"><strong>23</strong>Verified Reviews</div>
+    </div>
+    <div class="rating-item">
+      <span class="rating-icon">&#128205;</span>
+      <div class="rating-text"><strong>Alaba Kulito</strong>SNNPR, Ethiopia</div>
+    </div>
+    <div class="rating-item">
+      <span class="rating-icon">&#10003;</span>
+      <div class="rating-text"><strong>Free Cancellation</strong>Flexible Booking</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ROOMS PREVIEW -->
+  <section class="section fade-up">
+    <div class="section-label">Accommodation</div>
+    <h2 class="section-title">Rooms &amp; <em>Suites</em></h2>
+    <p class="section-desc">Each room is designed to offer comfort, serenity, and a touch of Ethiopian elegance.</p>
+    <div class="rooms-grid">
+
+      <div class="room-card" onclick="showPage('rooms')">
+        <div class="room-card-img-wrap">
+          <img class="room-card-img"
+            src="https://lh5.googleusercontent.com/p/AF1QipMvQZ3Wm1VZhGxEA2yCU2XiZtCvMv-R_4lsN3cQ=w400-h300-k-no"
+            alt="Classic Room"
+            onerror="this.src='https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80'"
+          >
+        </div>
+        <div class="room-card-body">
+          <div class="room-tag">Standard</div>
+          <div class="room-card-title">Classic Room</div>
+          <p class="room-card-desc">Comfortable and well-appointed rooms with modern amenities and warm Ethiopian hospitality.</p>
+          <div class="room-features">
+            <span class="room-feat">Free Wi-Fi</span>
+            <span class="room-feat">En Suite</span>
+            <span class="room-feat">Daily Housekeeping</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-card" onclick="showPage('rooms')">
+        <div class="room-card-img-wrap">
+          <img class="room-card-img"
+            src="https://lh5.googleusercontent.com/p/AF1QipOQmB-Y2jRpFxGkVyFbE5JZ3Xk_2hHiDPHcqMn8=w400-h300-k-no"
+            alt="Deluxe Room"
+            onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80'"
+          >
+        </div>
+        <div class="room-card-body">
+          <div class="room-tag">Deluxe</div>
+          <div class="room-card-title">Deluxe Room</div>
+          <p class="room-card-desc">Spacious rooms with enhanced furnishings, perfect for extended stays or those seeking extra comfort.</p>
+          <div class="room-features">
+            <span class="room-feat">Air Conditioning</span>
+            <span class="room-feat">City View</span>
+            <span class="room-feat">Sitting Area</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-card" onclick="showPage('rooms')">
+        <div class="room-card-img-wrap">
+          <img class="room-card-img"
+            src="https://lh5.googleusercontent.com/p/AF1QipPk4Z7YJiSNNj-WmwpPHaIzUJ9VFKWwgQ1Fkhig=w400-h300-k-no"
+            alt="Suite"
+            onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80'"
+          >
+        </div>
+        <div class="room-card-body">
+          <div class="room-tag">Premium</div>
+          <div class="room-card-title">Executive Suite</div>
+          <p class="room-card-desc">Our finest accommodation — a full suite experience with separate living area and premium finishes.</p>
+          <div class="room-features">
+            <span class="room-feat">Living Room</span>
+            <span class="room-feat">Premium Bath</span>
+            <span class="room-feat">Concierge</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- AMENITIES -->
+  <div class="amenities-bg">
+    <div class="amenities-inner fade-up">
+      <div class="section-label">Hotel Amenities</div>
+      <h2 class="section-title">Everything You <em>Need</em></h2>
+      <div class="amenities-grid">
+        <div class="amenity">
+          <div class="amenity-icon">&#127869;</div>
+          <div class="amenity-name">Restaurant</div>
+          <p class="amenity-desc">Authentic Ethiopian cuisine and international dishes prepared fresh daily.</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">&#128246;</div>
+          <div class="amenity-name">Free Wi-Fi</div>
+          <p class="amenity-desc">High-speed internet throughout the property for seamless connectivity.</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">&#128663;</div>
+          <div class="amenity-name">Parking</div>
+          <p class="amenity-desc">Secure on-site parking available for all guests at no additional charge.</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">&#128718;</div>
+          <div class="amenity-name">24/7 Service</div>
+          <p class="amenity-desc">Our dedicated team is always on hand to attend to your every need.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <section class="section fade-up">
+    <div class="section-label">Photo Gallery</div>
+    <h2 class="section-title">See <em>Alaba Kulito</em></h2>
+    <p class="section-desc">Explore the beauty of our surroundings and experience Ethiopia's vibrant culture.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipN-x4mRWZhXDikb4Uth3JNfZkVwqOuvWX5tP6Gc=w800-h1200-k-no"
+          alt="Hotel exterior"
+          onerror="this.src='https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&q=80'">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipMKe9D5-mYwcpFvVxT6GxMf1qVmQE4V87KdBl0E=w400-h300-k-no"
+          alt="Local area"
+          onerror="this.src='https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80'">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipO5JxGIRsBcbm3bVrj25lF_oqBmQLRqsTBnUXNi=w400-h300-k-no"
+          alt="Dining"
+          onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80'">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipPqJf3gJKuPiWcVl7kkgQgNHzHX-n2C0YFLwuGU=w400-h300-k-no"
+          alt="Rooms"
+          onerror="this.src='https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80'">
+        <div class="gallery-overlay"></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipMoGbF7uOxLhsFBDrRlVc8xlMfqApWZGmm9r0Ek=w400-h300-k-no"
+          alt="Ethiopia landscape"
+          onerror="this.src='https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&q=80'">
+        <div class="gallery-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <div class="reviews-section">
+    <div class="reviews-inner fade-up">
+      <div class="section-label">Guest Reviews</div>
+      <h2 class="section-title">What Our Guests <em>Say</em></h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"A wonderful place to stay in Alaba Kulito. The staff were incredibly warm and welcoming, and the rooms were clean and comfortable. Highly recommend!"</p>
+          <div class="review-author">— Verified Guest</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="review-text">"Great location and excellent service. The food at the restaurant was delicious — authentic Ethiopian flavors that I truly enjoyed during my stay."</p>
+          <div class="review-author">— Business Traveler</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+          <p class="review-text">"A solid hotel with friendly staff and comfortable rooms. The free Wi-Fi worked well and parking was convenient. Would stay here again."</p>
+          <div class="review-author">— Returning Guest</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-banner fade-up">
+    <h2>Ready to Experience Ethiopian Hospitality?</h2>
+    <p>Book directly for the best rates and free cancellation on all reservations.</p>
+    <a href="tel:0930333363" class="btn-dark">Call to Book: 093 033 3363</a>
+  </div>
+
+  <!-- LOCATION STRIP -->
+  <div class="location-strip">
+    <span>&#128205; 83FQ+VM, Alaba Kulito, Ethiopia</span>
+    <span>&middot;</span>
+    <a href="https://etetuabushahotel.com" target="_blank">etetuabushahotel.com</a>
+    <span>&middot;</span>
+    <a href="tel:0930333363">093 033 3363</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#" onclick="showPage('home')">Etetu <span>Abusha</span></a>
+        <p>A distinguished hotel in the heart of Alaba Kulito, offering genuine Ethiopian hospitality and comfortable accommodation for every traveler.</p>
+        <br>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p style="font-size:11px;margin-top:6px;">4.3 &middot; 23 Google Reviews</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('rooms')">Rooms &amp; Suites</a>
+        <a onclick="showPage('about')">About Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#">Restaurant</a>
+        <a href="#">Free Parking</a>
+        <a href="#">Wi-Fi</a>
+        <a href="#">Housekeeping</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <a href="tel:0930333363">093 033 3363</a><br>
+          83FQ+VM<br>
+          Alaba Kulito, SNNPR<br>
+          Ethiopia<br>
+          <a href="https://etetuabushahotel.com">etetuabushahotel.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Etetu Abusha Hotel. All rights reserved.</p>
+      <p>Alaba Kulito &middot; SNNPR &middot; Ethiopia</p>
+    </div>
+  </footer>
+
+</div><!-- end page-home -->
+
+
+<!-- ===== ROOMS PAGE ===== -->
+<div class="page" id="page-rooms">
+
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <img class="page-hero-img"
+      src="https://lh5.googleusercontent.com/p/AF1QipMvQZ3Wm1VZhGxEA2yCU2XiZtCvMv-R_4lsN3cQ=w1200-h600-k-no"
+      alt="Rooms"
+      onerror="this.src='https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80'"
+    >
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="section-label">Accommodation</div>
+      <h1>Rooms &amp;<br><em>Suites</em></h1>
+    </div>
+  </div>
+
+  <div class="rooms-list">
+
+    <div class="room-listing fade-up">
+      <div class="room-listing-img-wrap">
+        <img class="room-listing-img"
+          src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80"
+          alt="Classic Room">
+      </div>
+      <div class="room-listing-body">
+        <div class="room-type">Standard &middot; Best Value</div>
+        <div class="room-name">Classic Room</div>
+        <p class="room-listing-desc">Our Classic Rooms offer everything you need for a comfortable stay. Thoughtfully furnished with quality beds, modern bathrooms, and all essential amenities, these rooms represent the ideal blend of value and comfort in Alaba Kulito.</p>
+        <div class="room-amenities-list">
+          <span class="room-amenity">Comfortable double or twin bed</span>
+          <span class="room-amenity">Private en-suite bathroom</span>
+          <span class="room-amenity">Free high-speed Wi-Fi</span>
+          <span class="room-amenity">Daily housekeeping service</span>
+          <span class="room-amenity">Air conditioning &amp; ceiling fan</span>
+        </div>
+        <a href="tel:0930333363" class="btn-primary">Inquire About Rates</a>
+      </div>
+    </div>
+
+    <div class="room-listing fade-up">
+      <div class="room-listing-img-wrap">
+        <img class="room-listing-img"
+          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80"
+          alt="Deluxe Room">
+      </div>
+      <div class="room-listing-body">
+        <div class="room-type">Deluxe &middot; Most Popular</div>
+        <div class="room-name">Deluxe Room</div>
+        <p class="room-listing-desc">Step into our Deluxe Rooms for an elevated experience. Featuring more generous space, enhanced furnishings, and a small sitting area, these rooms are perfect for business travelers or those simply wanting a little extra luxury during their visit.</p>
+        <div class="room-amenities-list">
+          <span class="room-amenity">King-size bed with premium linens</span>
+          <span class="room-amenity">Spacious bathroom with hot water</span>
+          <span class="room-amenity">Dedicated work desk</span>
+          <span class="room-amenity">In-room safe</span>
+          <span class="room-amenity">Satellite television</span>
+        </div>
+        <a href="tel:0930333363" class="btn-primary">Inquire About Rates</a>
+      </div>
+    </div>
+
+    <div class="room-listing fade-up">
+      <div class="room-listing-img-wrap">
+        <img class="room-listing-img"
+          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80"
+          alt="Executive Suite">
+      </div>
+      <div class="room-listing-body">
+        <div class="room-type">Premium &middot; Finest Stay</div>
+        <div class="room-name">Executive Suite</div>
+        <p class="room-listing-desc">Our Executive Suite is the pinnacle of accommodation at Etetu Abusha Hotel. With a separate living room, dining area, and master bedroom, this suite offers a home-away-from-home experience with the full service of a top-tier hotel.</p>
+        <div class="room-amenities-list">
+          <span class="room-amenity">Separate living and sleeping areas</span>
+          <span class="room-amenity">Premium bathroom with bathtub</span>
+          <span class="room-amenity">Private dining area</span>
+          <span class="room-amenity">Dedicated concierge service</span>
+          <span class="room-amenity">Complimentary welcome amenities</span>
+        </div>
+        <a href="tel:0930333363" class="btn-primary">Inquire About Rates</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cta-banner">
+    <h2>Contact Us for Availability &amp; Rates</h2>
+    <p>Our team will find the perfect room for your dates and budget.</p>
+    <a href="tel:0930333363" class="btn-dark">Call: 093 033 3363</a>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#" onclick="showPage('home')">Etetu <span>Abusha</span></a>
+        <p>Comfort and Ethiopian warmth in the heart of Alaba Kulito.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('rooms')">Rooms &amp; Suites</a>
+        <a onclick="showPage('about')">About Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <a href="tel:0930333363">093 033 3363</a><br>
+          Alaba Kulito, Ethiopia
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Website</h4>
+        <div class="footer-contact">
+          <a href="https://etetuabushahotel.com">etetuabushahotel.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Etetu Abusha Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+</div><!-- end page-rooms -->
+
+
+<!-- ===== ABOUT PAGE ===== -->
+<div class="page" id="page-about">
+
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <img class="page-hero-img"
+      src="https://lh5.googleusercontent.com/p/AF1QipN3kKvIoHoY2pCpXw5_xhTxnMZb_VJ3r3l0JFrH=w1200-h500-k-no"
+      alt="About Etetu Abusha"
+      onerror="this.src='https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1200&q=80'"
+    >
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="section-label">Our Story</div>
+      <h1>About <em>Us</em></h1>
+    </div>
+  </div>
+
+  <div class="about-intro fade-up">
+    <div class="about-intro-img-stack">
+      <img class="about-main-img"
+        src="https://lh5.googleusercontent.com/p/AF1QipN-x4mRWZhXDikb4Uth3JNfZkVwqOuvWX5tP6Gc=w600-h800-k-no"
+        alt="Hotel exterior"
+        onerror="this.src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&q=80'">
+      <img class="about-accent-img"
+        src="https://lh5.googleusercontent.com/p/AF1QipOQmB-Y2jRpFxGkVyFbE5JZ3Xk_2hHiDPHcqMn8=w400-h300-k-no"
+        alt="Hotel detail"
+        onerror="this.src='https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80'">
+    </div>
+    <div class="about-text">
+      <div class="section-label">Etetu Abusha Hotel</div>
+      <h2 class="section-title">A Home in the<br><em>Heart of Ethiopia</em></h2>
+      <blockquote class="about-quote">
+        "We don't just offer rooms — we offer an experience rooted in genuine Ethiopian hospitality."
+      </blockquote>
+      <p class="about-body">
+        Etetu Abusha Hotel stands proudly in Alaba Kulito, a vibrant town in the Southern Nations, Nationalities, and Peoples' Region of Ethiopia. We were founded with a simple but powerful belief: that every guest deserves to feel truly at home, no matter how far they've traveled.
+        <br><br>
+        Our hotel combines the warmth and generosity that defines Ethiopian culture with the comfort and reliability that modern travelers expect. From our thoughtfully furnished rooms to our restaurant serving authentic local cuisine, every detail has been considered with our guests in mind.
+        <br><br>
+        With a 4.3-star rating across 23 Google reviews, our reputation speaks to the dedication of our team and the quality of the experience we deliver every single day.
+      </p>
+    </div>
+  </div>
+
+  <div class="about-stats">
+    <div class="about-stats-inner fade-up">
+      <div>
+        <div class="stat-num">4.3</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div>
+        <div class="stat-num">23</div>
+        <div class="stat-label">Guest Reviews</div>
+      </div>
+      <div>
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Guest Service</div>
+      </div>
+      <div>
+        <div class="stat-num">&#10003;</div>
+        <div class="stat-label">Free Cancellation</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="team-section fade-up">
+    <div class="section-label">Our Philosophy</div>
+    <h2 class="section-title">Our Core <em>Values</em></h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-num">01</div>
+        <div class="value-title">Ethiopian Hospitality</div>
+        <p class="value-text">We embody the Ethiopian tradition of welcoming every guest as family. Our staff are trained not just in service, but in genuine care — making you feel at home from the moment you arrive.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02</div>
+        <div class="value-title">Comfort &amp; Quality</div>
+        <p class="value-text">Every room, every meal, and every interaction is held to a high standard. We believe that quality hospitality should be accessible to every traveler who comes through our doors.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03</div>
+        <div class="value-title">Community Connection</div>
+        <p class="value-text">Rooted in Alaba Kulito, we are proud to be part of this vibrant community. We source locally, employ locally, and celebrate the culture and beauty of our region with every guest.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <h2>Come Experience It For Yourself</h2>
+    <p>Reach out to our team to check availability and learn more about our hotel.</p>
+    <a href="tel:0930333363" class="btn-dark">Get in Touch</a>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="nav-logo" href="#" onclick="showPage('home')">Etetu <span>Abusha</span></a>
+        <p>Comfort and Ethiopian warmth in the heart of Alaba Kulito.</p>
+        <br>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('rooms')">Rooms &amp; Suites</a>
+        <a onclick="showPage('about')">About Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Location</h4>
+        <div class="footer-contact">83FQ+VM<br>Alaba Kulito<br>SNNPR, Ethiopia</div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <a href="tel:0930333363">093 033 3363</a><br>
+          <a href="https://etetuabushahotel.com">etetuabushahotel.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Etetu Abusha Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+</div><!-- end page-about -->
+
+<script>
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    const navEl = document.getElementById('nav-' + name);
+    if (navEl) navEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('navLinks').classList.remove('open');
+    setTimeout(initFadeUp, 100);
+  }
+
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  function initFadeUp() {
+    const els = document.querySelectorAll('.page.active .fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(el => {
+      el.classList.remove('visible');
+      observer.observe(el);
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.background = window.scrollY > 40
+      ? 'rgba(7,15,29,0.97)'
+      : 'rgba(10,22,40,0.85)';
+  });
+
+  initFadeUp();
+</script>
+
+</body>
+</html>
